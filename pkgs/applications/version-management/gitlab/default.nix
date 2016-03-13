@@ -24,15 +24,15 @@ in
 
 stdenv.mkDerivation rec {
   name = "gitlab-${version}";
-  version = "8.5.1";
+  version = "8.6.0-pre";
 
   buildInputs = [ ruby bundler tzdata git nodejs procps ];
 
   src = fetchFromGitHub {
     owner = "gitlabhq";
     repo = "gitlabhq";
-    rev = "v${version}";
-    sha256 = "1pn5r4axzjkgdjr59y3wgxsd2n83zfd5bry1g2w4c2qw0wcw7zqb";
+    rev = "e23d6ada1c234acd45b676a34a2997aeae94d087";
+    sha256 = "0zhqpmvalbwj10fadxrlzfh4qnhysaps9f9fbkl69ccm3lksw3cz";
   };
 
   patches = [
